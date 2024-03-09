@@ -23,12 +23,12 @@ export const BottomNavigation = () => {
       <TagList />
 
       <div className="fixed bottom-0  w-lg h-18 grid grid-cols-3 bg-white dark:bg-black px-8 sm:px-0 pb-5 border-t pt-5 z-10 dark:border-zinc-600">
-        <button onClick={() => router.push('/summary')}>
+        <button onClick={() => router.push('/analytics')}>
           <div className="flex justify-center items-center flex-col group cursor-pointer">
             <div
               className={cn(
                 'flex items-center flex-col  justify-center',
-                pathname === '/summary'
+                pathname === '/analytics'
                   ? 'text-black dark:text-white'
                   : 'text-gray-500 dark:text-gray-400'
               )}
@@ -41,7 +41,7 @@ export const BottomNavigation = () => {
 
         <AddExpenseNav onClick={() => setExpenseModal(true)} />
 
-        <button onClick={() => router.push('/logs')}>
+        <button onClick={() => router.push('/connect')}>
           <div className="flex justify-center items-center flex-col group cursor-pointer">
             <div
               className={cn(
@@ -52,7 +52,7 @@ export const BottomNavigation = () => {
               )}
             >
               <HiOutlineMegaphone className="h-6 w-6 group-hover:scale-125 transition-all" />
-              <span className="text-sm">Change logs</span>
+              <span className="text-sm">Connect</span>
             </div>
           </div>
         </button>
